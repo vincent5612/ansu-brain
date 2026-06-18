@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>京东店群 · 安叔招商</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#f5f6f8;color:#1f2937}
+
+/* ── HERO ── */
+.hero{
+  background:linear-gradient(135deg,#0f0f0f,#1a1816 50%,#2d2a24);
+  padding:64px 24px 56px;text-align:center;position:relative;overflow:hidden
+}
+.hero-g1{position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(234,88,12,0.07),transparent 70%);top:-200px;right:-150px}
+.hero-g2{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(37,99,235,0.04),transparent 70%);bottom:-100px;left:-100px}
+.hero-badge{display:inline-block;font-size:11px;color:#d4a574;border:1px solid rgba(212,165,116,0.2);padding:4px 16px;border-radius:4px;letter-spacing:2px;margin-bottom:14px}
+.hero h1{font-size:38px;font-weight:800;color:#f5f0e8;line-height:1.25;letter-spacing:-0.5px}
+.hero h1 .g{color:#d4a574}
+.hero p{font-size:15px;color:rgba(245,240,232,0.5);max-width:540px;margin:12px auto 0;line-height:1.6}
+.hero-btn{display:inline-block;margin-top:22px;padding:14px 40px;background:#ea580c;color:#fff;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;transition:all .2s}
+.hero-btn:hover{background:#c2410c;transform:translateY(-1px)}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:28px;flex-wrap:wrap}
+.hero-stat{text-align:center}
+.hero-stat .n{font-size:30px;font-weight:800;color:#d4a574;font-family:"SF Mono",monospace}
+.hero-stat .l{font-size:12px;color:rgba(245,240,232,0.3);margin-top:2px}
+
+.container{max-width:960px;margin:0 auto;padding:0 24px}
+
+/* ── SECTION ── */
+.sec{padding:48px 0}
+.sec-title{font-size:20px;font-weight:700;text-align:center;margin-bottom:6px}
+.sec-sub{font-size:13px;color:#9ca3af;text-align:center;margin-bottom:28px}
+
+/* ── WHY US ── */
+.adv-list{max-width:100%;margin:0 auto}
+.adv-item{display:flex;gap:14px;align-items:flex-start;background:#fff;border-radius:10px;padding:18px 22px;border:1px solid #e5e7eb;margin-bottom:10px}
+.adv-item .icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.adv-item .icon.o{background:#fff7ed;color:#ea580c}
+.adv-item .icon.b{background:#eff6ff;color:#2563eb}
+.adv-item .icon.g{background:#f0fdf4;color:#16a34a}
+.adv-item .icon.p{background:#f5f3ff;color:#7c3aed}
+.adv-item .icon.r{background:#fef2f2;color:#dc2626}
+.adv-item h4{font-size:15px;font-weight:600}
+.adv-item p{font-size:13px;color:#6b7280;line-height:1.5;margin-top:2px}
+
+/* ── PROJECT ADV ── */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:#fff;border-radius:10px;padding:24px;border:1px solid #e5e7eb;text-align:center}
+.card .icon{font-size:30px;margin-bottom:10px}
+.card h4{font-size:15px;font-weight:600;margin-bottom:6px}
+.card p{font-size:13px;color:#6b7280;line-height:1.5}
+
+/* ── DATA BOARD ── */
+.data-board{background:#0f0f0f;border-radius:12px;padding:18px 22px;border:1px solid #2a2a2a}
+.data-board .label{font-size:11px;color:rgba(245,240,232,0.3);letter-spacing:1px;margin-bottom:10px}
+.db-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.db-item{text-align:center;padding:12px;background:rgba(255,255,255,0.03);border-radius:8px}
+.db-item .n{font-size:22px;font-weight:800;font-family:"SF Mono",monospace}
+.db-item .n.o{color:#fbbf24}
+.db-item .n.b{color:#60a5fa}
+.db-item .n.g{color:#86efac}
+.db-item .l{font-size:11px;color:rgba(245,240,232,0.3);margin-top:2px}
+.db-source{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);font-size:11px;color:rgba(245,240,232,0.25);text-align:center}
+
+/* ── CASE ── */
+.case-row{display:flex;gap:14px;flex-wrap:wrap}
+.case-card{flex:1;min-width:280px;background:#fff;border-radius:10px;border:1px solid #e5e7eb;padding:22px}
+.case-card .tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;display:inline-block}
+.case-card .tag.green{background:#dcfce7;color:#166534}
+.case-card .tag.blue{background:#dbeafe;color:#1e40af}
+.case-card .tag.orange{background:#fff7ed;color:#c2410c}
+.case-card h4{font-size:16px;font-weight:700;margin:8px 0 4px}
+.case-card .sub{font-size:12px;color:#9ca3af;margin-bottom:8px}
+.case-card .desc{font-size:13px;color:#6b7280;line-height:1.5}
+.case-stats{display:flex;gap:20px;margin-top:12px;padding-top:12px;border-top:1px solid #f3f4f6}
+.cs-item{text-align:center}
+.cs-item .n{font-size:20px;font-weight:700;color:#ea580c}
+.cs-item .l{font-size:11px;color:#9ca3af}
+.cs-note{font-size:12px;color:#9ca3af;margin-top:8px;font-style:italic}
+.cs-note2{font-size:12px;color:#9ca3af;margin-top:6px}
+
+/* ── FLOW ── */
+.flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.fs{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:18px 22px;width:155px;text-align:center}
+.fs .sn{font-size:11px;color:#ea580c;font-weight:600}
+.fs h4{font-size:14px;font-weight:600;margin:4px 0 2px}
+.fs p{font-size:12px;color:#6b7280}
+.fa{font-size:18px;color:#d1d5db;padding:0 6px}
+
+/* ── FEE ── */
+.fee-wrap{max-width:700px;margin:0 auto}
+.ftab{width:100%;border-collapse:collapse;font-size:14px}
+.ftab th{background:#1f2937;color:#fff;padding:10px 16px;text-align:center;font-size:12px;font-weight:600}
+.ftab td{padding:10px 16px;text-align:center;border-bottom:1px solid #e5e7eb}
+.ftab tr:nth-child(even){background:#f9fafb}
+.ftab .hl{background:#fff7ed!important;font-weight:600}
+.fee-note{background:#f9fafb;border-radius:8px;padding:14px 18px;margin-top:14px;font-size:13px;color:#6b7280;line-height:1.5;border-left:3px solid #ea580c}
+
+/* ── SERVICE ── */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+/* ── CTA ── */
+.cta{background:linear-gradient(135deg,#1a1816,#2d2a24);padding:50px 24px;text-align:center}
+.cta h2{font-size:24px;font-weight:700;color:#f5f0e8}
+.cta p{font-size:14px;color:rgba(245,240,232,0.5);margin:10px 0 20px}
+.cta .btn{display:inline-block;padding:14px 40px;background:#ea580c;color:#fff;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none}
+.cta .btn:hover{background:#c2410c}
+.cta .note{font-size:12px;color:rgba(245,240,232,0.2);margin-top:12px}
+/* QR弹窗 */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:100;align-items:center;justify-content:center}
+.modal.show{display:flex}
+.modal-box{background:#fff;border-radius:12px;padding:32px;text-align:center;max-width:320px}
+.modal-box h4{font-size:16px;margin-bottom:10px}
+.modal-box .qr-placeholder{width:200px;height:200px;background:#f3f4f6;border-radius:8px;display:flex;align-items:center;justify-content:center;margin:12px auto;color:#9ca3af;font-size:12px}
+.modal-box .close-btn{margin-top:12px;padding:8px 24px;border:none;border-radius:6px;background:#1f2937;color:#fff;font-size:13px;cursor:pointer}
+
+footer{text-align:center;padding:20px;font-size:12px;color:#9ca3af}
+
+@media(max-width:768px){
+  .grid3,.svc-grid{grid-template-columns:1fr}
+  .hero h1{font-size:24px}
+  .hero p{font-size:14px}
+  .hero-stats{gap:16px}
+  .hero-stat .n{font-size:22px}
+  .hero-stat .l{font-size:11px}
+  .flow{flex-direction:column;gap:6px}
+  .fa{transform:rotate(90deg)}
+  .db-grid{grid-template-columns:1fr}
+  .adv-item{padding:14px 16px}
+  .case-row{flex-direction:column}
+  .ftab{font-size:12px}
+  .ftab td,.ftab th{padding:8px 10px}
+  .sec{padding:32px 0}
+  .sec-title{font-size:18px}
+  .container{padding:0 16px}
+  .cta{padding:36px 16px}
+  .cta h2{font-size:20px}
+  .modal-box{padding:24px;max-width:280px}
+}
+@media(max-width:480px){
+  .hero{padding:40px 16px 36px}
+  .hero h1{font-size:20px}
+  .hero-stats{grid-template-columns:repeat(2,1fr);display:grid;gap:10px}
+  .hero-stat .n{font-size:20px}
+  .grid3{grid-template-columns:1fr}
+  .fee-wrap{overflow-x:auto}
+  .screenshot-grid{grid-template-columns:1fr!important}
+}
+</style>
+</head>
+<body>
+
+<!-- QR弹窗 -->
+<div class="modal" id="qrModal">
+  <div class="modal-box">
+    <h4>📩 长按扫码添加安叔</h4>
+    <div class="qr-img"><img src="file:///Users/apple/Desktop/%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" style="width:200px;height:auto;border-radius:8px" alt="安叔微信二维码"></div>
+    <p style="font-size:13px;color:#6b7280">添加时请备注「京东店群」</p>
+    <button class="close-btn" onclick="document.getElementById('qrModal').classList.remove('show')">关闭</button>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-g1"></div>
+  <div class="hero-g2"></div>
+  <div class="hero-badge">京东店群 · 安叔招商</div>
+  <h1>不囤货 · 不交学费<br>你赚了钱 <span class="g">我们再分</span></h1>
+  <p>京东前三甲服务商 · 10年+电商实战经验 · 上千学员验证</p>
+  <a class="hero-btn" href="javascript:;" onclick="document.getElementById('qrModal').classList.add('show')">📩 立即咨询</a>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="n">3天</div><div class="l">最快出单</div></div>
+    <div class="hero-stat"><div class="n">¥18,000</div><div class="l">学员真实月收益</div></div>
+    <div class="hero-stat"><div class="n">1,000+</div><div class="l">开店数</div></div>
+    <div class="hero-stat"><div class="n">0元</div><div class="l">学费（后端分佣）</div></div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- 为什么选择我们 -->
+<div class="sec">
+  <div class="sec-title">🔥 为什么选择我们</div>
+  <div class="sec-sub">不是空口说——是上千学员和真实数据验证过来的体系</div>
+  <div class="adv-list">
+    <div class="adv-item">
+      <div class="icon o">🏆</div>
+      <div><h4>京东前三甲服务商</h4><p>我们是京东官方认证服务商，不是个人教学。整个项目流程经过平台验证，稳定可靠。</p></div>
+    </div>
+    <div class="adv-item">
+      <div class="icon b">📈</div>
+      <div><h4>10年以上电商实战经验</h4><p>不是理论派。去年开过上万家店铺，流程全部跑通，每一步都有数据支撑。</p></div>
+    </div>
+    <div class="adv-item">
+      <div class="icon g">✅</div>
+      <div><h4>上千学员验证，成功可复制</h4><p>不是偶然案例。从0基础到稳定出单，模型成熟，照着做就能出结果。</p></div>
+    </div>
+    <div class="adv-item">
+      <div class="icon p">📋</div>
+      <div><h4>SOP全流程覆盖，不走弯路</h4><p>从选品到上架，从0到1，每一步都有标准操作流程。你不需要自己摸索，省时间省钱。</p></div>
+    </div>
+    <div class="adv-item">
+      <div class="icon r">🤝</div>
+      <div><h4>利益绑定模式</h4><p>不收学费、后端分佣——只有你赚到钱，我们才能赚钱。这是最长久、最靠谱的合作模式。</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- 项目优势 -->
+<div class="sec">
+  <div class="sec-title">🎯 项目优势</div>
+  <div class="sec-sub">为什么京东店群比传统副业更适合普通人</div>
+  <div class="grid3">
+    <div class="card"><div class="icon">📦</div><h4>一件代发，零库存</h4><p>客户下单→供应商直发。你不碰货、不压款、不承担库存风险。</p></div>
+    <div class="card"><div class="icon">💰</div><h4>免费培训，后端分佣</h4><p>不收一分钱学费。你赚了钱我们才抽——利益绑定。</p></div>
+    <div class="card"><div class="icon">📱</div><h4>手机+电脑都能操作</h4><p>不需要办公室和团队。有手机有电脑就能开始，不影响主业。</p></div>
+  </div>
+</div>
+
+<!-- 后台收益数据 -->
+<div class="sec" style="padding:24px 0 8px">
+  <div class="sec-title">📊 学员真实收益数据</div>
+  <div class="sec-sub">以下数据来自学员群内真实报备 + 后台截图，不是我们编的</div>
+  <div class="data-board">
+    <div class="label">📅 统计周期：最近30天</div>
+    <div class="db-grid">
+      <div class="db-item"><div class="n o">¥18,680</div><div class="l">学员A · 30天净利润</div></div>
+      <div class="db-item"><div class="n b">¥12,350</div><div class="l">学员B · 30天净利润</div></div>
+      <div class="db-item"><div class="n g">¥8,920</div><div class="l">学员C · 30天净利润</div></div>
+    </div>
+    <div class="db-source">
+      📌 数据来源：学员每日群内自报收益 + 后台截图核对 · 真实可查
+    </div>
+  </div>
+
+  <div class="data-board" style="margin-top:10px">
+    <div class="label">📅 统计周期：最近6个月</div>
+    <div class="db-grid">
+      <div class="db-item"><div class="n o">¥246,800</div><div class="l">半年累计总收益</div></div>
+      <div class="db-item"><div class="n b">41,100</div><div class="l">月均收益</div></div>
+      <div class="db-item"><div class="n g">1,000+</div><div class="l">总开店数</div></div>
+    </div>
+    <div class="db-source">📌 数据涵盖所有在训学员，非单个案例</div>
+  </div>
+</div>
+
+<!-- 数据截图证据 -->
+<div class="sec" style="padding-top:0">
+  <div class="sec-title">📸 学员收益截图（真实可查）</div>
+  <div class="sec-sub">以下截图来自学员群内真实报备 + 后台数据</div>
+  <div class="screenshot-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px">
+    <img src="file:///Users/apple/Desktop/jingdongshuju/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260617163923_1461_732.png" style="width:100%;border-radius:8px;border:1px solid #e5e7eb" alt="学员收益截图1">
+    <img src="file:///Users/apple/Desktop/jingdongshuju/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260617164015_1462_732.png" style="width:100%;border-radius:8px;border:1px solid #e5e7eb" alt="学员收益截图2">
+    <img src="file:///Users/apple/Desktop/jingdongshuju/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260617164059_1463_732.png" style="width:100%;border-radius:8px;border:1px solid #e5e7eb" alt="学员收益截图3">
+    <img src="file:///Users/apple/Desktop/jingdongshuju/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260617164146_1464_732.png" style="width:100%;border-radius:8px;border:1px solid #e5e7eb" alt="学员收益截图4">
+  </div>
+  <div style="text-align:center;margin-top:12px;font-size:13px;color:#9ca3af">📌 点击放大查看 · 数据来自学员每日群内报备及后台截图</div>
+</div>
+
+<!-- 学员案例 -->
+<div class="sec">
+  <div class="sec-title">🏆 学员故事</div>
+  <div class="sec-sub">同样的项目，不同的结果——差距只在执行力</div>
+
+  <div class="case-row">
+    <div class="case-card" style="flex:1.2">
+      <div class="tag green">✅ 听话照做型</div>
+      <h4>李某某</h4>
+      <div class="sub">小白起步 · 0电商基础</div>
+      <div class="desc">没经验、没背景，唯一优势是听话照做。按SOP一步不落，盯着走了25天，做到净收益18,000元。扣除采购和扣点，利润可观。现在准备加开到30家店。</div>
+      <div class="case-stats">
+        <div class="cs-item"><div class="n">3天</div><div class="l">最快出单</div></div>
+        <div class="cs-item"><div class="n">25天</div><div class="l">做到¥18,000</div></div>
+        <div class="cs-item"><div class="n">30家</div><div class="l">计划扩店</div></div>
+      </div>
+    </div>
+
+    <div class="case-card" style="flex:1">
+      <div class="tag orange">⚠️ 有想法但听话了</div>
+      <h4>老张</h4>
+      <div class="sub">反差学员 · 前期自己"优化"</div>
+      <div class="desc">刚开始总想"优化"流程，收益只有200-300。沟通后回到SOP，收益追到500+，偶尔800。不是能力问题，是心态问题。</div>
+      <div class="case-stats">
+        <div class="cs-item"><div class="n">200→300</div><div class="l">"优化"期收益</div></div>
+        <div class="cs-item"><div class="n">500→800</div><div class="l">按SOP后收益</div></div>
+        <div class="cs-item"><div class="n">心态</div><div class="l">关键差距</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:12px;font-size:13px;color:#9ca3af">学员收益数据来自每日群内真实报备 + 后台截图核对</div>
+</div>
+
+<!-- 操作流程 -->
+<div class="sec">
+  <div class="sec-title">📋 操作流程</div>
+  <div class="sec-sub">从咨询到出单，全程陪跑</div>
+  <div class="flow">
+    <div class="fs"><div class="sn">01</div><h4>咨询确认</h4><p>加微信→了解项目→确认你的时间和目标是否匹配</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="sn">02</div><h4>准备资料</h4><p>办营业执照（代办200元/张）→交保证金1000元（首月抵扣）</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="sn">03</div><h4>进群学习</h4><p>拉群配运营老师→理论+实操并行教学</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="sn">04</div><h4>选品上架</h4><p>用工具选品→上架商品→设置投流</p></div>
+    <div class="fa">→</div>
+    <div class="fs"><div class="sn">05</div><h4>出单赚钱</h4><p>持续运营→出单→扩大店铺→后端分佣</p></div>
+  </div>
+</div>
+
+<!-- 费用 -->
+<div class="sec">
+  <div class="sec-title">💵 费用说明</div>
+  <div class="sec-sub">透明公开，没有任何隐藏费用</div>
+  <div class="fee-wrap">
+    <table class="ftab">
+      <tr><th>项目</th><th>金额</th><th>说明</th></tr>
+      <tr><td>营业执照代办</td><td>200元/张</td><td>5张挂15个店铺</td></tr>
+      <tr><td>保证金</td><td>1,000元</td><td>首月分佣直接抵扣</td></tr>
+      <tr><td>培训费</td><td style="color:#16a34a;font-weight:600">免费</td><td>不收学费，陪跑到底</td></tr>
+      <tr class="hl"><td>月营业额＜1万</td><td>固定1,000元</td><td>保证金抵扣=0元</td></tr>
+      <tr><td>月营业额≥1万</td><td>30%（打7折≈21%）</td><td>利润越高比例越低</td></tr>
+      <tr><td>30店以上</td><td>30%（打6折≈18%）</td><td>规模越大越划算</td></tr>
+    </table>
+    <div class="fee-note">
+      <b>📌 新旧模式对比：</b>以前我们收1万学费，同行收16,800元，还要先打八折再提30%。现在新模式——<b>不收学费</b>，抽成也改成阶梯制：1万以下固定1,000元（保证金抵扣=0元），大于1万打七折抽30%，30店以上打六折抽30%。<br><br>
+      <span style="display:block;text-align:center;font-size:15px;font-weight:700;color:#ea580c;padding:8px 0">利润越高、规模越大，比例越低——你赚得越多，我们分得越少</span>
+    </div>
+  </div>
+</div>
+
+<!-- 陪跑服务 -->
+<div class="sec">
+  <div class="sec-title">🛎️ 陪跑服务内容</div>
+  <div class="sec-sub">不仅仅是教学——是陪你做出结果</div>
+  <div class="svc-grid">
+    <div class="card"><div class="icon">🎯</div><h4>选品指导</h4><p>教你怎么用工具选品、判断爆款、避开竞争红海</p></div>
+    <div class="card"><div class="icon">📝</div><h4>上架优化</h4><p>标题怎么写、主图怎么做、定价策略——一步一步教</p></div>
+    <div class="card"><div class="icon">📈</div><h4>投流运营</h4><p>投流策略、ROI优化、数据复盘——持续调整</p></div>
+    <div class="card"><div class="icon">💬</div><h4>客服售后</h4><p>客户咨询话术、退换货处理流程、差评应对</p></div>
+    <div class="card"><div class="icon">🔄</div><h4>规则同步</h4><p>京东平台规则变动第一时间同步，帮你规避风险</p></div>
+    <div class="card"><div class="icon">📱</div><h4>群内答疑</h4><p>工作日实时在线响应，周末值班，不让你卡住</p></div>
+  </div>
+</div>
+
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>想做副业？</h2>
+  <p>加安叔微信，发「京东店群」<br>先了解你的情况，合适的拉群开始，不合适的直接告诉你原因</p>
+  <a class="btn" href="javascript:;" onclick="document.getElementById('qrModal').classList.add('show')">📩 扫码咨询</a>
+  <div class="note">不收学费 · 不画饼 · 合适再来</div>
+</div>
+
+<footer>
+  安叔 · 京东服务商 · 一个正在做副业实验的14年创业者
+</footer>
+
+</body>
+</html>
